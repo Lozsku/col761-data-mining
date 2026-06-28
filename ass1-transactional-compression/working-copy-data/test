@@ -1,0 +1,21 @@
+python3 -m torch.distributed.launch --nproc_per_node=1 --master_port=4739 test_warping.py --name test_partflow_vitonhd_unpaired_1109 --PBAFN_warp_checkpoint 'checkpoints/gp-vton_partflow_vitonhd_usepreservemask_lrarms_1027/PBAFN_warp_epoch_121.pth' --resize_or_crop None --verbose --tf_log --batchSize 1 --num_gpus 1 --label_nc 14 --launcher pytorch --dataroot /VITONHD --image_test_pairs_txt test_pairs_our.txt 
+
+
+
+
+
+usage: test_warping.py [-h] [--name NAME] [--gpu_ids GPU_IDS] [--num_gpus NUM_GPUS] [--checkpoints_dir CHECKPOINTS_DIR] [--norm NORM] [--use_dropout] [--data_type {8,16,32}] [--verbose]
+                       [--batchSize BATCHSIZE] [--loadSize LOADSIZE] [--fineSize FINESIZE] [--label_nc LABEL_NC] [--input_nc INPUT_NC] [--output_nc OUTPUT_NC] [--dataroot DATAROOT]
+                       [--resize_or_crop RESIZE_OR_CROP] [--serial_batches] [--no_flip] [--nThreads NTHREADS] [--max_dataset_size MAX_DATASET_SIZE] [--warproot WARPROOT]
+                       [--display_winsize DISPLAY_WINSIZE] [--tf_log] [--netG NETG] [--ngf NGF] [--n_downsample_global N_DOWNSAMPLE_GLOBAL] [--n_blocks_global N_BLOCKS_GLOBAL]
+                       [--n_blocks_local N_BLOCKS_LOCAL] [--n_local_enhancers N_LOCAL_ENHANCERS] [--niter_fix_global NITER_FIX_GLOBAL] [--tv_weight TV_WEIGHT] [--image_pairs_txt IMAGE_PAIRS_TXT]
+                       [--launcher {none,pytorch}] [--local_rank LOCAL_RANK] [--write_loss_frep WRITE_LOSS_FREP] [--display_freq DISPLAY_FREQ] [--print_freq PRINT_FREQ]
+                       [--save_latest_freq SAVE_LATEST_FREQ] [--save_epoch_freq SAVE_EPOCH_FREQ] [--no_html] [--debug] [--continue_train] [--load_pretrain LOAD_PRETRAIN] [--which_epoch WHICH_EPOCH]
+                       [--phase PHASE] [--niter NITER] [--niter_decay NITER_DECAY] [--beta1 BETA1] [--lr LR] [--lr_D LR_D] [--pretrain_checkpoint_D PRETRAIN_CHECKPOINT_D]
+                       [--PFAFN_warp_checkpoint PFAFN_WARP_CHECKPOINT] [--PFAFN_gen_checkpoint PFAFN_GEN_CHECKPOINT] [--PBAFN_warp_checkpoint PBAFN_WARP_CHECKPOINT]
+                       [--PBAFN_gen_checkpoint PBAFN_GEN_CHECKPOINT] [--CPM_checkpoint CPM_CHECKPOINT] [--CPM_D_checkpoint CPM_D_CHECKPOINT] [--write_loss_frep_eval WRITE_LOSS_FREP_EVAL]
+                       [--display_freq_eval DISPLAY_FREQ_EVAL] [--add_mask_tvloss] [--num_D NUM_D] [--n_layers_D N_LAYERS_D] [--ndf NDF] [--lambda_feat LAMBDA_FEAT] [--no_ganFeat_loss] [--no_vgg_loss]
+                       [--no_lsgan] [--pool_size POOL_SIZE] [--debug_test] [--image_test_pairs_txt IMAGE_TEST_PAIRS_TXT] [--image_pairs_txt_eval IMAGE_PAIRS_TXT_EVAL] [--use_preserve_mask_refine]
+                       [--repeat_num REPEAT_NUM] [--loss_ce LOSS_CE] [--loss_gan LOSS_GAN] [--debug_train] [--test_flip] [--first_order_smooth_weight FIRST_ORDER_SMOOTH_WEIGHT]
+                       [--squaretv_weight SQUARETV_WEIGHT] [--mask_epoch MASK_EPOCH] [--no_dynamic_mask]
+

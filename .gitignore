@@ -1,0 +1,5 @@
+# Local-only paths — kept on disk, not part of this repository.
+_*/
+/submissions/
+# Large file (exceeds GitHub's 100 MB per-file limit); a gzipped copy is included instead.
+/ass1-transactional-compression/working-copy-data/D_test.dat
